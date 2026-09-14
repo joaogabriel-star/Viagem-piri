@@ -7,7 +7,7 @@
 <meta name="description" content="Viagem de amigos a Pirinópolis, 6 a 8 de novembro. Roteiro, quem vai e a divisão das contas.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -29,19 +29,20 @@
 <main id="conteudo">
 
   <section class="hero">
-    <div class="hero__contours" aria-hidden="true">
-      <svg viewBox="0 0 1200 700" preserveAspectRatio="xMidYMax slice" focusable="false">
-        <path class="contour c1" d="M-50,620 C150,560 300,660 480,600 C660,540 760,610 960,560 C1080,530 1160,560 1260,540" />
-        <path class="contour c2" d="M-50,660 C180,600 340,690 520,640 C700,590 820,650 1000,610 C1100,590 1180,610 1260,600" />
-        <path class="contour c3" d="M-50,540 C200,470 320,560 500,500 C680,440 780,510 980,460 C1090,430 1170,460 1260,440" />
-        <path class="contour c4" d="M-50,470 C220,390 360,480 540,420 C720,360 800,430 1000,380 C1100,350 1170,380 1260,360" />
+    <div class="hero__foliage" aria-hidden="true">
+      <svg viewBox="0 0 1200 760" preserveAspectRatio="xMidYMax slice" focusable="false">
+        <path class="river" d="M-50,520 C160,470 260,580 420,540 C610,495 700,600 900,555 C1030,525 1120,555 1260,530" />
+        <g class="leaf leaf--1"><path d="M50 2C22 14 2 42 2 72c0 30 22 50 48 50s48-20 48-50C98 42 78 14 50 2Z"/><path class="vein" d="M50 10 L50 116"/></g>
+        <g class="leaf leaf--2"><path d="M50 2C22 14 2 42 2 72c0 30 22 50 48 50s48-20 48-50C98 42 78 14 50 2Z"/><path class="vein" d="M50 10 L50 116"/></g>
+        <g class="leaf leaf--3"><path d="M50 2C22 14 2 42 2 72c0 30 22 50 48 50s48-20 48-50C98 42 78 14 50 2Z"/><path class="vein" d="M50 10 L50 116"/></g>
+        <g class="leaf leaf--4"><path d="M50 2C22 14 2 42 2 72c0 30 22 50 48 50s48-20 48-50C98 42 78 14 50 2Z"/><path class="vein" d="M50 10 L50 116"/></g>
       </svg>
     </div>
     <div class="wrap hero__inner">
-      <p class="hero__kicker">Fim de semana em</p>
+      <p class="hero__kicker">fim de semana em</p>
       <h1 class="hero__title">Pirinópolis</h1>
       <p class="hero__dates">6 a 8 de novembro</p>
-      <p class="hero__lede">Três dias, cachoeira, cidade histórica e a turma toda dividindo o quarto, o carro e a conta — direito, dessa vez.</p>
+      <p class="hero__lede">Três dias de mato, cachoeira gelada e cidade histórica — a turma toda dividindo quarto, carro e conta. Direito, dessa vez.</p>
       <a class="hero__cta" href="#contas">Ver quanto cada um paga</a>
     </div>
   </section>
@@ -49,11 +50,11 @@
   <section class="section sobre" id="turma">
     <div class="wrap">
       <h2 class="section__title">Quem vai</h2>
-      <p class="section__intro">Dez pessoas pagantes — quatro casais e duas solteiras — mais a Rebeca, que vai de graça porque é criança e ninguém vai cobrar rateio de criança.</p>
+      <p class="section__intro">Dez pessoas pagantes — quatro casais e duas solteiras — mais a Rebeca, que topa ir de qualquer jeito.</p>
 
       <div class="roster">
         <div class="roster__group">
-          <h3 class="roster__label">Casais</h3>
+          <h3 class="roster__label"><span class="hand">casais</span></h3>
           <ul class="couples">
             <li class="couple">
               <span class="couple__names">Ariel Araújo <span class="amp">&amp;</span> namorada</span>
@@ -71,7 +72,7 @@
         </div>
 
         <div class="roster__group">
-          <h3 class="roster__label">Solteiras</h3>
+          <h3 class="roster__label"><span class="hand">solteiras</span></h3>
           <ul class="singles">
             <li>Thamyres Araújo</li>
             <li>Annanda Ursula</li>
@@ -79,8 +80,8 @@
         </div>
 
         <div class="roster__group roster__group--kid">
-          <h3 class="roster__label">Não entra na conta</h3>
-          <p class="kid-note"><span class="hand">Rebeca</span> — vai junto, não paga rateio.</p>
+          <h3 class="roster__label"><span class="hand">a caçula</span></h3>
+          <p class="kid-note">Rebeca vai junto. Lá embaixo dá pra escolher se ela entra no rateio ou não.</p>
         </div>
       </div>
     </div>
@@ -89,27 +90,27 @@
   <section class="section roteiro" id="roteiro">
     <div class="wrap">
       <h2 class="section__title">Roteiro</h2>
-      <p class="section__intro">Três dias, sem pressa. Ajustável conforme a energia da turma no domingo.</p>
+      <p class="section__intro">Três dias, sem pressa. Ajustável conforme a energia da turma no domingo de manhã.</p>
 
       <ol class="itinerary">
         <li class="day">
           <div class="day__date"><span class="day__num">6</span><span class="day__mon">nov</span></div>
           <div class="day__body">
-            <h3>Sexta — chegada</h3>
+            <h3>Chegada</h3>
             <p>Saída depois do trabalho, check-in no local e primeira noite tranquila. Quem chegar mais cedo garante o quarto.</p>
           </div>
         </li>
         <li class="day">
           <div class="day__date"><span class="day__num">7</span><span class="day__mon">nov</span></div>
           <div class="day__body">
-            <h3>Sábado — cachoeira</h3>
-            <p>Dia inteiro na cachoeira. Levar protetor solar, água e uma sacola extra pra roupa molhada.</p>
+            <h3>Cachoeira</h3>
+            <p>Dia inteiro na água. Levar protetor solar, garrafa d'água e uma sacola extra pra roupa molhada.</p>
           </div>
         </li>
         <li class="day">
           <div class="day__date"><span class="day__num">8</span><span class="day__mon">nov</span></div>
           <div class="day__body">
-            <h3>Domingo — cidade e volta</h3>
+            <h3>Cidade e volta</h3>
             <p>Manhã de passeio pelo centro histórico, almoço e estrada de volta no fim da tarde.</p>
           </div>
         </li>
@@ -120,11 +121,11 @@
   <section class="section contas" id="contas">
     <div class="wrap">
       <h2 class="section__title">A conta</h2>
-      <p class="section__intro">Regra simples: calcula o valor por pessoa normalmente. Cada solteira paga o valor individual. Cada homem de casal paga o dele <em>mais</em> o da parceira — ou seja, o dobro do individual. Sem divisão por "unidades de pagamento", sem ninguém sozinho pagando mais que casal.</p>
+      <p class="section__intro">O valor por pessoa é sempre o gasto total dividido pelo número de pagantes. As opções abaixo mudam só <em>quem</em> paga o quê — mexa e o recibo atualiza sozinho.</p>
 
       <div class="ledger">
         <div class="ledger__inputs">
-          <h3 class="ledger__heading">Gastos base</h3>
+          <h3 class="ledger__heading"><span class="hand">gastos base</span></h3>
 
           <div class="cost-row cost-row--fixed">
             <label>Local (3 dias)</label>
@@ -132,8 +133,8 @@
           </div>
 
           <div class="cost-row cost-row--fixed">
-            <label>Gasolina (por pessoa × 10)</label>
-            <output>R$ 500</output>
+            <label>Gasolina (R$ 50 por pagante)</label>
+            <output id="gasolina-out">R$ 500</output>
           </div>
 
           <div class="cost-row cost-row--range">
@@ -149,24 +150,47 @@
             <output id="diversao-out">R$ 350</output>
           </div>
           <p class="range-hint">Faixa: R$ 200 – R$ 500</p>
+
+          <h3 class="ledger__heading ledger__heading--spaced"><span class="hand">suas estimativas</span></h3>
+          <p class="ledger__hint">Vai levar um gasto extra — lenha, gás, pedágio, aluguel de boia? Coloca aqui.</p>
+
+          <div class="custom-form">
+            <input type="text" id="custom-label" placeholder="Descrição (ex: pedágio)" aria-label="Descrição do gasto extra">
+            <input type="number" id="custom-value" placeholder="R$" min="0" step="10" aria-label="Valor do gasto extra">
+            <button type="button" id="custom-add">+ adicionar</button>
+          </div>
+          <ul class="custom-list" id="custom-list" aria-live="polite"></ul>
+
+          <h3 class="ledger__heading ledger__heading--spaced"><span class="hand">como dividir</span></h3>
+
+          <label class="check-row">
+            <input type="checkbox" id="casal-junto" checked>
+            <span>Casal paga junto <span class="check-row__hint">(ele cobre a parte dela também)</span></span>
+          </label>
+          <p class="check-explain" id="casal-explain">Desmarcado: cada um dos dois paga só a própria parte.</p>
+
+          <label class="check-row">
+            <input type="checkbox" id="rebeca-paga">
+            <span>Rebeca também entra no rateio</span>
+          </label>
+          <p class="check-explain">Marcado: ela vira mais um pagante, e a gasolina soma uma pessoa a mais.</p>
         </div>
 
         <div class="receipt" role="group" aria-label="Recibo do rateio">
           <div class="receipt__paper">
             <p class="receipt__title">Rateio — Pirinópolis</p>
-            <p class="receipt__sub">6 a 8 de novembro · 10 pagantes</p>
+            <p class="receipt__sub">6 a 8 de novembro · <span id="payer-count">10</span> pagantes</p>
 
             <div class="receipt__divider" aria-hidden="true"></div>
 
             <dl class="receipt__totals">
               <div><dt>Total do fim de semana</dt><dd id="total-geral">R$ 3.600</dd></div>
               <div><dt>Valor individual</dt><dd id="valor-individual">R$ 360</dd></div>
-              <div><dt>Valor por casal (2×)</dt><dd id="valor-casal">R$ 720</dd></div>
             </dl>
 
             <div class="receipt__divider receipt__divider--dashed" aria-hidden="true"></div>
 
-            <p class="receipt__section-label">Quem paga quanto</p>
+            <p class="receipt__section-label">quem paga quanto</p>
             <ul class="receipt__list" id="payer-list"></ul>
 
             <div class="receipt__divider" aria-hidden="true"></div>
@@ -184,7 +208,7 @@
       <div class="logistica__grid">
         <div class="logistica__item">
           <h3>Gasolina</h3>
-          <p>R$ 50 fixo por pessoa, já dividido entre os carros conforme quem for de carona com quem.</p>
+          <p>R$ 50 por pagante, já dividido entre os carros conforme quem for de carona com quem.</p>
         </div>
         <div class="logistica__item">
           <h3>Hospedagem</h3>
@@ -201,8 +225,9 @@
 </main>
 
 <footer class="site-footer">
-  <div class="wrap">
+  <div class="wrap site-footer__inner">
     <p>Pirinópolis, 6 a 8 de novembro. Organizado pela turma.</p>
+    <p class="playlist"><span class="hand">trilha da estrada: reggae primeiro, o resto a gente decide na van</span><span class="playlist__stripe" aria-hidden="true"></span></p>
   </div>
 </footer>
 
