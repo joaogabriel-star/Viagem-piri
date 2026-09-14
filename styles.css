@@ -422,6 +422,13 @@ em { color: var(--gold); font-style: normal; }
   font-variant-numeric: tabular-nums;
 }
 
+.cost-row--muted output {
+  font-family: var(--font-body);
+  font-weight: 500;
+  color: var(--ink-faint);
+  font-size: 0.88rem;
+}
+
 .cost-row--range {
   flex-wrap: wrap;
 }

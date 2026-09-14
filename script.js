@@ -30,9 +30,7 @@ const brl = (value) =>
   });
 
 const alimentacaoInput = document.getElementById("alimentacao");
-const diversaoInput = document.getElementById("diversao");
 const alimentacaoOut = document.getElementById("alimentacao-out");
-const diversaoOut = document.getElementById("diversao-out");
 const gasolinaOut = document.getElementById("gasolina-out");
 
 const casalJuntoInput = document.getElementById("casal-junto");
@@ -104,7 +102,6 @@ customAddBtn.addEventListener("click", () => {
 
 function calcular() {
   const alimentacao = Number(alimentacaoInput.value);
-  const diversao = Number(diversaoInput.value);
   const casalJunto = casalJuntoInput.checked;
   const rebecaPaga = rebecaInput.checked;
 
@@ -112,11 +109,10 @@ function calcular() {
   const gasolinaTotal = FIXED.gasolinaPorPessoa * payerCount;
   const extrasTotal = customItems.reduce((sum, item) => sum + item.value, 0);
 
-  const totalGeral = FIXED.hospedagem + gasolinaTotal + alimentacao + diversao + extrasTotal;
+  const totalGeral = FIXED.hospedagem + gasolinaTotal + alimentacao + extrasTotal;
   const valorIndividual = totalGeral / payerCount;
 
   alimentacaoOut.textContent = brl(alimentacao);
-  diversaoOut.textContent = brl(diversao);
   gasolinaOut.textContent = brl(gasolinaTotal);
   totalGeralEl.textContent = brl(totalGeral);
   valorIndividualEl.textContent = brl(valorIndividual);
@@ -163,7 +159,6 @@ function calcular() {
 }
 
 alimentacaoInput.addEventListener("input", calcular);
-diversaoInput.addEventListener("input", calcular);
 casalJuntoInput.addEventListener("change", calcular);
 rebecaInput.addEventListener("change", calcular);
 

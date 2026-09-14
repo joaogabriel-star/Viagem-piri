@@ -121,7 +121,7 @@
   <section class="section contas" id="contas">
     <div class="wrap">
       <h2 class="section__title">A conta</h2>
-      <p class="section__intro">O valor por pessoa é sempre o gasto total dividido pelo número de pagantes. As opções abaixo mudam só <em>quem</em> paga o quê — mexa e o recibo atualiza sozinho.</p>
+      <p class="section__intro">O valor por pessoa é o gasto coletivo (local, gasolina, alimentação e extras) dividido pelo número de pagantes. Diversão fica de fora — cada um paga a sua. As opções abaixo mudam só <em>quem</em> paga o quê no coletivo — mexa e o recibo atualiza sozinho.</p>
 
       <div class="ledger">
         <div class="ledger__inputs">
@@ -144,12 +144,11 @@
           </div>
           <p class="range-hint">Faixa: R$ 1.000 – R$ 1.500</p>
 
-          <div class="cost-row cost-row--range">
-            <label for="diversao">Diversão (cachoeira + passeio)</label>
-            <input type="range" id="diversao" min="200" max="500" step="10" value="350">
-            <output id="diversao-out">R$ 350</output>
+          <div class="cost-row cost-row--fixed cost-row--muted">
+            <label>Diversão (cachoeira + passeio)</label>
+            <output>R$ 200 – R$ 500 por pessoa</output>
           </div>
-          <p class="range-hint">Faixa: R$ 200 – R$ 500</p>
+          <p class="range-hint">Cada um paga a própria diversão direto na hora — não entra no rateio coletivo.</p>
 
           <h3 class="ledger__heading ledger__heading--spaced"><span class="hand">suas estimativas</span></h3>
           <p class="ledger__hint">Vai levar um gasto extra — lenha, gás, pedágio, aluguel de boia? Coloca aqui.</p>
