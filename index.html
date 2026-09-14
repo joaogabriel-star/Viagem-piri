@@ -50,7 +50,7 @@
   <section class="section sobre" id="turma">
     <div class="wrap">
       <h2 class="section__title">Quem vai</h2>
-      <p class="section__intro">Dez pessoas pagantes — quatro casais e duas solteiras — mais a Rebeca, que topa ir de qualquer jeito.</p>
+      <p class="section__intro">Dez pessoas pagantes: quatro casais e duas solteiras.</p>
 
       <div class="roster">
         <div class="roster__group">
@@ -77,11 +77,6 @@
             <li>Thamyres Araújo</li>
             <li>Annanda Ursula</li>
           </ul>
-        </div>
-
-        <div class="roster__group roster__group--kid">
-          <h3 class="roster__label"><span class="hand">a caçula</span></h3>
-          <p class="kid-note">Rebeca vai junto. Lá embaixo dá pra escolher se ela entra no rateio ou não.</p>
         </div>
       </div>
     </div>
@@ -168,11 +163,15 @@
           </label>
           <p class="check-explain" id="casal-explain">Desmarcado: cada um dos dois paga só a própria parte.</p>
 
-          <label class="check-row">
-            <input type="checkbox" id="rebeca-paga">
-            <span>Rebeca também entra no rateio</span>
-          </label>
-          <p class="check-explain">Marcado: ela vira mais um pagante, e a gasolina soma uma pessoa a mais.</p>
+          <h3 class="ledger__heading ledger__heading--spaced"><span class="hand">e se a turma crescer?</span></h3>
+          <p class="ledger__hint">Simula o valor por pessoa se mais gente entrar na viagem — a gasolina também escala junto.</p>
+
+          <div class="cost-row cost-row--range">
+            <label for="pagantes">Quantidade de pagantes</label>
+            <input type="range" id="pagantes" min="10" max="20" step="1" value="10">
+            <output id="pagantes-out">10 pessoas</output>
+          </div>
+          <p class="range-hint">Base confirmada: 10. Acima disso é só simulação.</p>
         </div>
 
         <div class="receipt" role="group" aria-label="Recibo do rateio">

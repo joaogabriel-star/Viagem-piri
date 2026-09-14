@@ -274,11 +274,12 @@ em { color: var(--gold); font-style: normal; }
 .roster {
   margin-top: 44px;
   display: grid;
-  grid-template-columns: 1.3fr 1fr 1fr;
+  grid-template-columns: 1.4fr 1fr;
   gap: 40px;
+  max-width: 640px;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 560px) {
   .roster { grid-template-columns: 1fr; gap: 32px; }
 }
 
@@ -312,13 +313,6 @@ em { color: var(--gold); font-style: normal; }
   padding-bottom: 12px;
   border-bottom: 1px solid var(--line);
   font-weight: 500;
-}
-
-.roster__group--kid {
-  align-self: start;
-}
-.kid-note {
-  color: var(--ink-dim);
 }
 
 /* ---------- roteiro ---------- */
@@ -654,7 +648,7 @@ em { color: var(--gold); font-style: normal; }
   font-weight: 600;
 }
 .receipt__list li.is-couple span:last-child { color: #8a5a12; }
-.receipt__list li.is-kid span:last-child { color: var(--green-deep); }
+.receipt__list li.is-extra span:last-child { color: var(--green-deep); }
 
 .receipt__check {
   margin-top: 4px;

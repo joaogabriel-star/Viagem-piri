@@ -1,13 +1,15 @@
 // Cálculo do rateio da viagem a Pirinópolis.
 //
 // Regra base: valor individual = gasto total / número de pagantes.
-// A partir daí, três opções mudam só QUEM paga o quê:
+// A partir daí:
 //   - "casal junto": o homem paga o dele + o da parceira (2x individual);
 //     desmarcado, cada um dos dois paga só a própria parte.
-//   - "Rebeca paga": ela entra como mais um pagante (e a gasolina, que é
-//     por pagante, soma uma pessoa a mais).
 //   - gastos extras: qualquer linha que a pessoa quiser adicionar (pedágio,
 //     lenha, boia etc.) entra direto no total antes de dividir.
+//   - "quantidade de pagantes": simula o valor por pessoa se a turma
+//     crescer além dos 10 confirmados. A gasolina (por pagante) escala
+//     junto; quem passa de 10 entra na lista como convidado extra,
+//     pagando o valor individual.
 
 const FIXED = {
   hospedagem: 1500,
@@ -34,7 +36,8 @@ const alimentacaoOut = document.getElementById("alimentacao-out");
 const gasolinaOut = document.getElementById("gasolina-out");
 
 const casalJuntoInput = document.getElementById("casal-junto");
-const rebecaInput = document.getElementById("rebeca-paga");
+const pagantesInput = document.getElementById("pagantes");
+const pagantesOut = document.getElementById("pagantes-out");
 
 const customLabelInput = document.getElementById("custom-label");
 const customValueInput = document.getElementById("custom-value");
@@ -103,9 +106,9 @@ customAddBtn.addEventListener("click", () => {
 function calcular() {
   const alimentacao = Number(alimentacaoInput.value);
   const casalJunto = casalJuntoInput.checked;
-  const rebecaPaga = rebecaInput.checked;
+  const payerCount = Number(pagantesInput.value);
+  const extraGuests = Math.max(0, payerCount - 10);
 
-  const payerCount = 10 + (rebecaPaga ? 1 : 0);
   const gasolinaTotal = FIXED.gasolinaPorPessoa * payerCount;
   const extrasTotal = customItems.reduce((sum, item) => sum + item.value, 0);
 
@@ -114,6 +117,7 @@ function calcular() {
 
   alimentacaoOut.textContent = brl(alimentacao);
   gasolinaOut.textContent = brl(gasolinaTotal);
+  pagantesOut.textContent = `${payerCount} pessoa${payerCount === 1 ? "" : "s"}`;
   totalGeralEl.textContent = brl(totalGeral);
   valorIndividualEl.textContent = brl(valorIndividual);
   payerCountEl.textContent = String(payerCount);
@@ -145,10 +149,10 @@ function calcular() {
     somaArrecadada += valorIndividual;
   });
 
-  if (rebecaPaga) {
+  for (let i = 1; i <= extraGuests; i++) {
     const li = document.createElement("li");
-    li.className = "is-kid";
-    li.innerHTML = `<span>Rebeca</span><span>${brl(valorIndividual)}</span>`;
+    li.className = "is-extra";
+    li.innerHTML = `<span>Convidado extra ${i}</span><span>${brl(valorIndividual)}</span>`;
     payerListEl.appendChild(li);
     somaArrecadada += valorIndividual;
   }
@@ -160,7 +164,7 @@ function calcular() {
 
 alimentacaoInput.addEventListener("input", calcular);
 casalJuntoInput.addEventListener("change", calcular);
-rebecaInput.addEventListener("change", calcular);
+pagantesInput.addEventListener("input", calcular);
 
 renderCustomList();
 calcular();
